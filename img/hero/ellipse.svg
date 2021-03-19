@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="919.47" height="762.97" viewBox="0 0 919.47 762.97"> -->
+ <?xml-stylesheet type="text/css" href="styles.css"?>
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="919.47" height="762.97" viewBox="0 0 919.47 762.97" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  <defs>
+    <linearGradient id="grad1" x1="60%" y1="0%" x2="30%" y2="50%">
+          <stop offset="0%" style="stop-color:#ff2f96; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color:#fa875c; stop-opacity: 1" />
+        </linearGradient>
+          <linearGradient id="grad2" x1="80%" y1="0%"
+           x2="50%" y2="100%"
+            >
+            <animate 
+              attributeName="x1"
+              dur="14s" 
+              values="80%;-20%;50%;70%;80%;"
+              repeatCount="indefinite" />
+              <animate 
+              attributeName="x2"
+              dur="14s" 
+              values="50%;80%;80%;-40%;50%"
+              repeatCount="indefinite" />
+              <animate 
+              attributeName="y1"
+              dur="14s" 
+              values="0%;40%;100%;70%;0%"
+              repeatCount="indefinite" />
+              <animate 
+              attributeName="y2"
+              dur="14s" 
+              values="100%;90%;0%;50%;100%"
+              repeatCount="indefinite" />
+            <stop offset="0" style="stop-color:#ff2f96; stop-opacity: 1"/>
+            <stop offset="1" style="stop-color:#ff8f5a; stop-opacity: 1"/> 
+          </linearGradient>
+   <!--  <filter id="filter" x="500.5" y="1108.72" width="919.47" height="762.97" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="500.5" y="1108.72" width="919.47" height="762.97" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTE5LjQ3IiBoZWlnaHQ9Ijc2Mi45NyIgdmlld0JveD0iMCAwIDkxOS40NyA3NjIuOTciPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMzcxLjY2MiIgeTE9Ijc2Mi45NyIgeDI9IjU0Ny44MDgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmY4ZjVhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45ODciIHN0b3AtY29sb3I9IiNmZjJmOTYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmYyZjk2Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSI5MTkuNDciIGhlaWdodD0iNzYyLjk3Ii8+Cjwvc3ZnPgo="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter> -->
+  </defs>
+  <path fill="url(#grad2)" class="linethree" d="M895.52,1148.41c106.74-50.46,207.47-50.61,291.69-12.74,84.44,37.57,152.36,113.17,198.49,207.12,44.27,94.88,44.23,196.79,8.07,279.24-36.66,83.67-97.67,146.75-180.8,191.77-44.03,22.67-90.32,38.2-149.15,47.73-58.06,9.4-128.678,12.8-203.495,7.95-148.474-9.32-314.876-53.08-349.967-151.79-19.887-49.01-7.4-105.2,17.321-161.74,25.13-56.62,62.5-113.6,101.74-166.12,39.644-52.59,81.154-100.71,123.89-141.52,43.141-40.9,87.508-74.48,142.211-99.9h0Z" transform="translate(-500.5 -1108.72)"/>
+</svg>
