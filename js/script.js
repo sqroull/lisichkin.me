@@ -70,13 +70,25 @@
 		if (e.target.classList.contains('callme')) {
 			formWrapper.classList.toggle('is-active');
 			menu.classList.remove('is-active');
+			if (formWrapper.classList.contains('is-active')) {
+				document.body.classList.add('stop-scrolling');
+			} else {
+				document.body.classList.remove('stop-scrolling');
+			}
 		} else if (e.target.contains(closeMenu)) {
 			menu.classList.remove('is-active');
+			document.body.classList.remove('stop-scrolling');
 		} else if (e.target.contains(closeForm)) {
 			formWrapper.classList.toggle('is-active');
+			document.body.classList.remove('stop-scrolling');
 		} else if (e.target.classList.contains('callburger')) {
 			menu.classList.toggle('is-active');
 			formWrapper.classList.remove('is-active');
+			if (menu.classList.contains('is-active')) {
+				document.body.classList.add('stop-scrolling');
+			} else {
+				document.body.classList.remove('stop-scrolling');
+			}
 		}
 	}
 	document.body.addEventListener('click', formOnClick);
@@ -90,6 +102,8 @@
 					behavior: 'smooth',
 					block: 'start'
 				});
+				menu.classList.remove('is-active');
+				document.body.classList.remove('stop-scrolling');
 			});
 		};
 	}
