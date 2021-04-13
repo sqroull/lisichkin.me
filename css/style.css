@@ -719,7 +719,7 @@ input:focus {
 
 .section-do_parallax {
     border-radius: 0 0 4% 4%;
-    background: url(/img/do/1300.jpg) top center no-repeat;
+    background: url(../img/do/1300.jpg) top center no-repeat;
     -webkit-box-shadow: 0 0 20px #333, inset 0 0 100px 10px var(--black-color);
             box-shadow: 0 0 20px #333, inset 0 0 100px 10px var(--black-color);
 }
@@ -862,7 +862,7 @@ rect.lineone {
     padding-top: 700px;
     margin-bottom: -700px;
     z-index: 0;
-    background-image: url(/img/sites/1900.jpg);
+    background-image: url(../img/sites/1900.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1277,7 +1277,7 @@ rect.lineone {
 }
 
 .section-contacts_parallax {
-    background-image: url(/img/contacts/800x300.jpg);
+    background-image: url(../img/contacts/800x300.jpg);
     overflow-y: hidden;
     overflow-x: hidden;
     height: 100%;
@@ -1821,7 +1821,7 @@ rect.lineone {
     }
 
     .section-hero_parallax {
-        background-image: url(/img/hero/1100.jpg);
+        background-image: url(../img/hero/1100.jpg);
     }
 
     .section-hero__content {
@@ -1833,16 +1833,16 @@ rect.lineone {
     }
 
     .section-do_parallax {
-        background-image: url(/img/do/1200.jpg);
+        background-image: url(../img/do/1200.jpg);
         background-size: cover;
     }
 
     .section-sites_parallax {
-        background-image: url(/img/sites/1000.jpg);
+        background-image: url(../img/sites/1000.jpg);
     }
 
     .section-contacts_parallax {
-        background-image: url(/img/contacts/800x400.jpg);
+        background-image: url(../img/contacts/800x400.jpg);
     }
 }
 
@@ -2016,7 +2016,7 @@ rect.lineone {
     }
 
     .section-hero_parallax {
-        background-image: url(/img/hero/768.jpg);
+        background-image: url(../img/hero/768.jpg);
         background-attachment: unset;
         background-size: auto 650px;
         background-position: left bottom;
@@ -2096,7 +2096,7 @@ rect.lineone {
     }
 
     .section-do_parallax {
-        background-image: url(/img/do/768.jpg);
+        background-image: url(../img/do/768.jpg);
         border-radius: 0 0 50px 50px;
     }
 
@@ -2119,7 +2119,7 @@ rect.lineone {
     }
 
     .section-sites_parallax {
-        background-image: url(/img/sites/700.jpg);
+        background-image: url(../img/sites/700.jpg);
         background-attachment: unset;
         background-position: center bottom;
         background-size: auto 1200px;
@@ -2184,7 +2184,7 @@ rect.lineone {
     }
 
     .section-contacts_parallax {
-        background-image: url(/img/contacts/600x400.jpg);
+        background-image: url(../img/contacts/600x400.jpg);
         background-attachment: unset;
         background-size: 100% 100%;
         background-position: left bottom;
@@ -2302,7 +2302,7 @@ rect.lineone {
     }
 
     .section-hero_parallax {
-        background-image: url(/img/hero/568.jpg);
+        background-image: url(../img/hero/568.jpg);
     }
 
     .section-hero__pictures {
@@ -2319,7 +2319,7 @@ rect.lineone {
     }
 
     .section-do_parallax {
-        background-image: url(/img/do/568.jpg);
+        background-image: url(../img/do/568.jpg);
     }
 
     .section-do__list {
@@ -2350,7 +2350,7 @@ rect.lineone {
     }
 
     .section-sites_parallax {
-        background-image: url(/img/sites/568.jpg);
+        background-image: url(../img/sites/568.jpg);
     }
 
     .section-sites__container {
@@ -2394,7 +2394,7 @@ rect.lineone {
 
 @media (max-width: 380px) {
     .section-hero_parallax {
-        background-image: url(/img/hero/380.jpg);
+        background-image: url(../img/hero/380.jpg);
         background-size: 100% 600px;
     }
 
@@ -2403,7 +2403,7 @@ rect.lineone {
     }
 
     .section-do_parallax {
-        background-image: url(/img/do/380.jpg);
+        background-image: url(../img/do/380.jpg);
     }
 
     .section-do__container {
@@ -2437,7 +2437,7 @@ rect.lineone {
     }
 
     .section-sites_parallax {
-        background-image: url(/img/sites/380.jpg);
+        background-image: url(../img/sites/380.jpg);
         background-size: 100% 900px;
     }
 
@@ -2452,7 +2452,7 @@ rect.lineone {
     }
 
     .parallax-contacts {
-        background-image: url(/img/contacts/896-380x500.jpg);
+        background-image: url(../img/contacts/896-380x500.jpg);
     }
 
     .section-contacts__container {
