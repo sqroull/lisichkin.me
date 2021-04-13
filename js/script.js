@@ -126,11 +126,15 @@
 	}
 	window.addEventListener('scroll', scrollWindowY);
 
+
+	// var mySwiper = new Swiper ('#target')
+	
+
 	const swiper = new Swiper('.swiper-container', {
 		direction: 'horizontal',
 		loop: true,
 		autoplay: {
-			delay: 3000,
+			delay: 1000,
 			disableOnInteraction: true,
 		},
 		pagination: {
@@ -163,6 +167,10 @@
 			}
 		}
 	});
+
+	swiper.el.addEventListener("mouseenter", function(event) {   
+		swiper.autoplay.stop();
+	}, false);
 
 	let selector = document.querySelectorAll('input[type="tel"]');
 	let im = new Inputmask('+7 (999) 999 99 99');
