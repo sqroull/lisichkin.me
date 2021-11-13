@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Memory Game</h1>
+    </header>
+
+    <main class="container">
+        
+        <section class="stats">
+            
+            <div class="stats__timer">
+                Таймер:
+                <div class="stats__secs"></div>
+            </div>
+            
+            <div class="stats__moves">
+                Пар просмотрено: <span class="stats__counter">0</span>
+            </div>
+            
+
+            <div class="stats-range">
+                <div class="stats-range__value scale-1">
+                    <span id="rangeCount">4</span>
+                </div>
+                <div class="stats-field">
+                    <div class="stats-field__value stats-field__value--min">2</div>
+                    <input id="rangeInput" type="range" min="2" max="10" value="4" step="2">
+                    <div class="stats-field__value stats-field__value--max">10</div>
+                </div>
+            </div>
+            
+            <button class="stats__restart" id="restartBtn">
+                start
+        	</button>
+            
+        </section>
+        <ul class="card-list" id="cardList">
+            <li class="card" data-value="1">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#1"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="1">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#1"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="2">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#2"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="2">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#2"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="3">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#3"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="3">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#3"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="4" >
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#4"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="4">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#4"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="5">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#5"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="5">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#5"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="6">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#6"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="6">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#6"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="7">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#7"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="7">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#7"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="8">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#8"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="8">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#8"></use>
+                </svg>
+            </li>
+
+            <!-- 36 -->
+            <li class="card" data-value="9">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#9"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="9">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#9"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="10">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#10"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="10">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#10"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="11">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#11"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="11">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#11"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="12" >
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#12"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="12">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#12"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="13">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#13"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="13">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#13"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="14">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#14"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="14">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#14"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="15">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#15"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="15">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#15"></use>
+                </svg>
+            </li>   
+            <li class="card" data-value="16">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#16"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="16">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#16"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="17">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#17"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="17">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#17"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="18">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#18"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="18">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#18"></use>
+                </svg>
+            </li>
+
+            <!-- 64 -->
+            <li class="card" data-value="19">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#19"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="19">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#19"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="20">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#20"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="20">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#20"></use>
+                </svg>
+            </li> 
+            <li class="card" data-value="21">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#21"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="21">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#21"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="22">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#22"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="22">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#22"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="23">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#23"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="23">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#23"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="24">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#24"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="24">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#24"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="25">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#25"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="25">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#25"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="26">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#26"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="26">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#26"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="27">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#27"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="27">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#27"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="28">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#28"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="28">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#28"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="29">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#29"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="29">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#29"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="30">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#30"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="30">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#30"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="31">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#31"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="31">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#31"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="32">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#32"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="32">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#32"></use>
+                </svg>
+            </li>
+
+            <!-- 100 -->
+            <li class="card" data-value="33">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#33"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="33">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#33"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="34">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#34"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="34">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#34"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="35">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#35"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="35">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#35"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="36">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#36"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="36">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#36"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="37">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#37"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="37">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#37"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="38">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#38"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="38">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#38"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="39">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#39"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="39">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#39"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="40">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#40"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="40">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#40"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="41">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#41"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="41">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#41"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="42">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#42"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="42">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#42"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="43">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#43"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="43">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#43"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="44">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#44"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="44">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#44"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="45">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#45"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="45">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#45"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="46">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#46"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="46">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#46"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="47">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#47"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="47">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#47"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="48">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#48"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="48">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#48"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="49">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#49"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="49">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#49"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="50">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#50"></use>
+                </svg>
+            </li>
+            <li class="card" data-value="50">
+                <svg class="card__img">
+                    <use xlink:href="./sprite.svg#50"></use>
+                </svg>
+            </li>
+        </ul>
+
+        <section class="modal" id="modal">
+            <div class="modal__wrapper">
+                <h2 class="modal__title" id="modalTitle">Поздравляем!</h2>
+                <a class="modal__close" href="#">×</a>
+                <div class="modal__result modal__result--title">
+                    Ваш результат:
+                </div>
+                <div class="modal__result">
+                    <p class="modal__pair-flips">Всего пар открыто: <span id="flips"> </span></p>
+                    <p id="timeLeft">Осталось времени: <span id="timeTotal"> </span> </p>
+                </div>
+                <button class="modal__btn" onclick="startAgain()">
+                    Начать заново
+                </button>
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

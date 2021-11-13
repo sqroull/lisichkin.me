@@ -1,0 +1,10 @@
+@mixin breakpoint($bp) {
+
+    @media (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin transition($item: color, $transition-d: .2s, $transitoin-tf: ease) {
+    transition: $item $transition-d $transitoin-tf;
+}

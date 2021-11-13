@@ -1,0 +1,72 @@
+.stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 13px;
+    grid-template-rows: 195px;
+    margin-bottom: 3rem;
+
+    @include breakpoint($mobile-bp) {
+        grid-template-columns: 140px 140px 140px 140px;
+        overflow: auto;
+    }
+}
+
+.stories__item {
+    position: relative;
+    border-radius: .5rem;
+    box-shadow: 0 5px 15px rgba($black, .2);
+    overflow: hidden;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-image: linear-gradient(to bottom, rgba($black, .8), rgba($black, 0) 50%, rgba($black, .4) 75%, rgba($black, .8),);
+    }
+
+    &:hover {
+        .stories__preview {
+            transform: scale(1.3);
+        }
+    }
+}
+
+.stories__preview {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.05);
+    transition: transform 1.5s ease;
+}
+
+.stories__title,
+.stories__date {
+    position: absolute;
+    width: 100%;
+    padding: 1.4rem;
+    left: 0;
+    z-index: 3;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: $white;
+}
+
+.stories__title {
+    top: 0;
+}
+
+.stories__date {
+    bottom: 0;
+    text-align: right;
+}

@@ -1,0 +1,46 @@
+---
+layout: default
+title: Profile
+---
+
+<h1 class="page__title">Профиль</h1>
+
+
+<form class="form" action="/" method="POST">
+    <div class="cabinet">
+        <div class="cabinet__form">
+            <div class="form__group form__group--md">
+                <input class="form__control" type="text"
+                placeholder="Ваше имя" value="Лисичкин Александр">
+                <span class="form__line"></span>
+            </div>
+        
+            <div class="form__group form__group--md">
+                <input class="form__control" type="email"
+                placeholder="Ваш email" value="sqroull@yandex.ru">
+                <span class="form__line"></span>
+            </div>
+        
+            <div class="form__group form__group--md">
+                <input class="form__control" type="password"
+                placeholder="Новый пароль">
+                <span class="form__line"></span>
+            </div>
+            
+            <div class="form__group form__group--md">
+                <input class="form__control" type="password"
+                placeholder="Подтвердите пароль">
+                <span class="form__line"></span>
+            </div>
+        </div>
+        <div class="cabinet__avatar">
+            <img src="assets/images/avatar.png" alt="Аватар">
+
+            <label class="cabinet__file">
+                <input type="file">
+                выбрать аватар
+            </label>
+        </div>
+    </div>
+    <button class="btn btn--blue btn--rounded btn--sm" type="submit">Сохранить</button>
+</form>
